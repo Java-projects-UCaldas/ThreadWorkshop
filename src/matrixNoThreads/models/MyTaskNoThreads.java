@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package matrixNoThreads.models;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -66,6 +65,8 @@ public class MyTaskNoThreads {
         
         int[][] scalarProduct = new int[matrix.length][bMatrix[0].length];
 
+        long ini = System.currentTimeMillis();
+        
         if (matrix[0].length == bMatrix.length) {
             for (int a = 0; a < bMatrix[0].length; a++) {
                 for (int i = 0; i < matrix.length; i++) {
@@ -77,6 +78,10 @@ public class MyTaskNoThreads {
                 }
             }
         }
+        
+        long end = System.currentTimeMillis();
+        
+        System.out.println("Final time: " + ((end - ini)/1000f) + " seconds.");
         return scalarProduct;
     }
     

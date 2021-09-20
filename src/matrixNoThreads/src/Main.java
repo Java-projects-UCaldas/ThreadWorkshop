@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src;
+package matrixNoThreads.src;
 
-import models.MyTaskNoThreads;
+import matrixNoThreads.models.MyTaskNoThreads;
+
+
 
 /**
  *
@@ -21,14 +23,14 @@ public class Main {
         int dimension = 1000;
         
         MyTaskNoThreads m1 = new MyTaskNoThreads(dimension);
-        m1.printMatrix("m1");
+        //m1.printMatrix("m1");
         MyTaskNoThreads m2 = new MyTaskNoThreads(dimension);
-        m2.printMatrix("m2");
+        //m2.printMatrix("m2");
         MyTaskNoThreads product = new MyTaskNoThreads(dimension);
         
         product.setMatrix(m1.scalarProduct(m2));
         
-        product.printMatrix("product");
+       // product.printMatrix("product");
         
     }
     
